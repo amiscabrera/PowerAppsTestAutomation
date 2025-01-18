@@ -43,8 +43,10 @@ parameters:
 jobs:
 - job: "PowerAppsTestFrameworkAutomation"
   pool:
-    vmImage: ${{ parameters.image }}
+    #vmImage: ${{ parameters.image }}
+    name: Default
     demands:
+    - Agent.Name -equals AzureDevOpsAgen
     - msbuild
     - visualstudio
     - vstest
