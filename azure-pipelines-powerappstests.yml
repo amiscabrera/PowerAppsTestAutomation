@@ -22,7 +22,7 @@ parameters:
    values:
    - windows-latest
    - vs2017-win2016
-   - windows-2019
+   #- windows-2019
  - name: BrowserType
    displayName: Browser Type
    type: string
