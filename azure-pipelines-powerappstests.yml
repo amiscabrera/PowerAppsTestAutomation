@@ -47,9 +47,9 @@ jobs:
     name: Default
     demands:
     - Agent.Name -equals AzureDevOpsAgen
-    - msbuild
-    - visualstudio
-    - vstest
+    #- msbuild
+    #- visualstudio
+    #- vstest
   variables:
   - name: PortalUrl
     value: https://make.powerapps.com
