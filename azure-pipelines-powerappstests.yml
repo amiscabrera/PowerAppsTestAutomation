@@ -43,7 +43,7 @@ parameters:
 jobs:
 - job: "PowerAppsTestFrameworkAutomation"
   pool:
-    name: Azure Pipelines
+    name: PowerAppsTests
     demands:
     #- Agent.Name -equals abcdefg
     - msbuild
