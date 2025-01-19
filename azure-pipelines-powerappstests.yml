@@ -43,9 +43,11 @@ parameters:
 jobs:
 - job: "PowerAppsTestFrameworkAutomation"
   pool:
-    name: Default
+    name: PowerAppsTests
     demands:
-    - Agent.Name -equals AzureDevOpsAgen
+    - msbuild
+    - visualstudio
+    - vstest
 
   variables:
   - name: PortalUrl
