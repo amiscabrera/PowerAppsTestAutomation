@@ -45,6 +45,7 @@ jobs:
   pool:
     name: PowerAppsTests
     demands:
+    #- Agent.Name -equals abcdefg
     - msbuild
     - visualstudio
     - vstest
