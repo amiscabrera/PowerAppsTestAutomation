@@ -26,13 +26,13 @@ steps:
     #  displayName: 'Set Agent Screen Resolution to 1920x1080'
 
 
-    - task: NuGetCommand@2
+    #- task: NuGetCommand@2
 
-      displayName: 'Restore NuGet Packages'
+    #  displayName: 'Restore NuGet Packages'
 
-      inputs:
+    #  inputs:
 
-        restoreSolution: '${{parameters.RepositoryName}}/PowerAppsTestAutomation.sln'
+    #    restoreSolution: '${{parameters.RepositoryName}}/PowerAppsTestAutomation.sln'
 
 
     - task: VSBuild@1
