@@ -65,8 +65,8 @@ jobs:
     value: PowerAppsTestAutomation
 
   steps:
-  - checkout: self
-  - checkout: PowerAppsTestAutomation
+  #- checkout: self
+  #- checkout: PowerAppsTestAutomation
   #- template: localsteps.yml # Provide optional local YAML template here
   - template: frameworksteps.yml@PowerAppsTestAutomation
     parameters:
