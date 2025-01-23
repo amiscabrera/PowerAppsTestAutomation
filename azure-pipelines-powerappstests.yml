@@ -14,15 +14,15 @@ resources:
       endpoint: github.com_amiscabrera
 
 parameters:
- #- name: image
- #  displayName: Pool Image
- #  type: string
- #  # See https://github.com/MicrosoftDocs/azure-devops-docs/blob/master/docs/pipelines/agents/hosted.md#use-a-microsoft-hosted-agent for more pool types
- #  default: windows-latest
- #  values:
- #  - windows-latest
- #  - vs2017-win2016
- #  - windows-2019
+ - name: image
+   displayName: Pool Image
+   type: string
+   # See https://github.com/MicrosoftDocs/azure-devops-docs/blob/master/docs/pipelines/agents/hosted.md#use-a-microsoft-hosted-agent for more pool types
+   default: windows-latest
+   values:
+   - windows-latest
+   - vs2017-win2016
+   - windows-2019
  - name: BrowserType
    displayName: Browser Type
    type: string
@@ -43,7 +43,8 @@ parameters:
 jobs:
 - job: "PowerAppsTestFrameworkAutomation"
   pool:
-    name: PowerAppsTests
+    #name: Azure Pipelines
+    vmImage: ${{ parameters.image }}
     demands:
     #- Agent.Name -equals abcdefg
     - msbuild
